@@ -1,8 +1,9 @@
-import { Button, Heading, MultiStep, Text, TextInput } from '@enoque-ui/react'
+import { Button, Heading, MultiStep, Text } from '@enoque-ui/react'
 import { Container, Header } from '../styles'
 import { ArrowRight } from 'phosphor-react'
 import { useRouter } from 'next/router'
 import { ConnectBox, ConnectItem } from './styles'
+import { signIn } from 'next-auth/react'
 
 export default function ConnectCalendar() {
   const router = useRouter()
@@ -22,7 +23,7 @@ export default function ConnectCalendar() {
       <ConnectBox>
         <ConnectItem>
           <Text>Google Calendar</Text>
-          <Button variant="secondary" siz="sm">
+          <Button variant="secondary" siz="sm" onClick={() => signIn('google')}>
             Connect
             <ArrowRight />
           </Button>
