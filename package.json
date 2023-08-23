@@ -10,6 +10,7 @@
     "lnt": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "@auth/core": "^0.12.0",
     "@enoque-ui/react": "^2.0.1",
     "@hookform/resolvers": "^3.2.0",
     "@prisma/client": "^5.1.1",
@@ -20,7 +21,7 @@
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
-    "next-auth": "^4.23.0",
+    "next-auth": "^4.18.6",
     "nookies": "^2.5.2",
     "phosphor-react": "^1.4.1",
     "react": "18.2.0",

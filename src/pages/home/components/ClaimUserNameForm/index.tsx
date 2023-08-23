@@ -49,7 +49,7 @@ export function ClaimUserNameForm() {
       </Form>
       <FormAnnotation>
         <Text size="sm">
-          {errors.username ? errors.username.message : 'Username  is required'}
+          {errors.username ? errors.username.message : 'Enter the username'}
         </Text>
       </FormAnnotation>
     </>
