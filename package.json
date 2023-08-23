@@ -10,7 +10,7 @@
     "lnt": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@enoque-ui/react": "^2.1.0",
+    "@enoque-ui/react": "^2.0.1",
     "@hookform/resolvers": "^3.2.0",
     "@prisma/client": "^5.1.1",
     "@types/node": "20.4.5",
