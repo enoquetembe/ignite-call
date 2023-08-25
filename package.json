@@ -22,6 +22,7 @@
     "dayjs": "^1.11.9",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "googleapis": "^126.0.0",
     "i": "^0.3.7",
     "next": "13.4.12",
     "next-auth": "^4.18.6",
