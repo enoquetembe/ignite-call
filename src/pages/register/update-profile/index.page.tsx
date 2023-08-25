@@ -18,6 +18,7 @@ import { unstable_getServerSession } from 'next-auth'
 import { useSession } from 'next-auth/react'
 import { api } from '@/lib/axios'
 import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 
 const updateProfileFormSchema = z.object({
   bio: z.string(),
@@ -46,39 +47,42 @@ export default function UpdateProfile() {
   }
 
   return (
-    <Container>
-      <Header>
-        <Heading>Set your availability</Heading>
-        <Text>Finally, a brief description and a profile picture.</Text>
+    <>
+      <NextSeo title="Update your profile | Ignite Call" noindex />
+      <Container>
+        <Header>
+          <Heading>Set your availability</Heading>
+          <Text>Finally, a brief description and a profile picture.</Text>
 
-        <MultiStep size={4} currentStep={4} />
+          <MultiStep size={4} currentStep={4} />
 
-        <ProfileBox as="form" onSubmit={handleSubmit(handleUpdateProfile)}>
-          <label>
-            <Text>Picture</Text>
-            <Avatar
-              src={session.data?.user.avatar_url}
-              referrerPolicy="no-referrer"
-              alt={session.data?.user.name}
-            />
-          </label>
+          <ProfileBox as="form" onSubmit={handleSubmit(handleUpdateProfile)}>
+            <label>
+              <Text>Picture</Text>
+              <Avatar
+                src={session.data?.user.avatar_url}
+                referrerPolicy="no-referrer"
+                alt={session.data?.user.name}
+              />
+            </label>
 
-          <label>
-            <Text size="sm"> About you </Text>
-            <TextArea {...register('bio')} />
-            <FormAnnotation size="sm">
-              Tell us a bit about yourself. This will be displayed on your
-              personal page.
-            </FormAnnotation>
-          </label>
+            <label>
+              <Text size="sm"> About you </Text>
+              <TextArea {...register('bio')} />
+              <FormAnnotation size="sm">
+                Tell us a bit about yourself. This will be displayed on your
+                personal page.
+              </FormAnnotation>
+            </label>
 
-          <Button type="submit" disabled={isSubmitting}>
-            Finish
-            <ArrowRight />
-          </Button>
-        </ProfileBox>
-      </Header>
-    </Container>
+            <Button type="submit" disabled={isSubmitting}>
+              Finish
+              <ArrowRight />
+            </Button>
+          </ProfileBox>
+        </Header>
+      </Container>
+    </>
   )
 }
 

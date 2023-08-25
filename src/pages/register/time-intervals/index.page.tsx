@@ -24,6 +24,7 @@ import {
 } from './styles'
 import { api } from '@/lib/axios'
 import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 
 const timeIntervalsFormSchema = z.object({
   intervals: z
@@ -108,6 +109,8 @@ export default function TimeIntervals() {
 
   return (
     <>
+      <NextSeo title="Select your availability | Ignite Call" noindex />
+
       <Container>
         <Header>
           <Heading> Almost there! </Heading>

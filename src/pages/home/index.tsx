@@ -1,29 +1,44 @@
 import { Heading, Text } from '@enoque-ui/react'
-import { Container, Hero, Preview } from './style'
-
-import calendar from '@/assets/calendar.png'
 import Image from 'next/image'
+import { Container, Hero, Preview } from './styles'
+
+import previewImage from '@/assets/calendar.png'
 import { ClaimUserNameForm } from './components/ClaimUserNameForm'
+import { NextSeo } from 'next-seo'
 
 export default function Home() {
   return (
-    <Container>
-      <Hero>
-        <Heading size="4xl" as="h1">
-          Simplified Scheduling
-        </Heading>
+    <>
+      <NextSeo
+        title="Simplify your schedule | Ignite Call"
+        description="Connect your calendar and let people book appointments in their free
+        time."
+      />
 
-        <Text size="lg">
-          Connect your calendar and let people book appointments in their free
-          time.
-        </Text>
+      <Container>
+        <Hero>
+          <Heading size="4xl" as="h1">
+            Simplified Scheduling
+          </Heading>
 
-        <ClaimUserNameForm />
-      </Hero>
+          <Text size="lg">
+            Connect your calendar and let people book appointments in their free
+            time.
+          </Text>
 
-      <Preview>
-        <Image src={calendar} alt="" height={400} quality={100} priority />
-      </Preview>
-    </Container>
+          <ClaimUserNameForm />
+        </Hero>
+
+        <Preview>
+          <Image
+            src={previewImage}
+            height={400}
+            quality={100}
+            priority
+            alt="Calendar symbolizing application in operation"
+          />
+        </Preview>
+      </Container>
+    </>
   )
 }
