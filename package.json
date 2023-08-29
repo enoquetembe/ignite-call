@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && prisma generate",
+    "build": "npm ci && next build && prisma generate",
     "start": "next start",
     "lint": "next lint",
     "lnt": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
@@ -38,6 +38,6 @@
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
     "@types/cookie": "^0.5.1",
-    "prisma": "^5.1.1"
+    "prisma": "^5.2.0"
   }
 }
