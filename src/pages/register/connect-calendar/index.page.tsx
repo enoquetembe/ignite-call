@@ -69,7 +69,7 @@ export default function ConnectCalendar() {
             type="submit"
             disabled={!isSignedId}
           >
-            Próximo passo
+            Next step
             <ArrowRight />
           </Button>
         </ConnectBox>

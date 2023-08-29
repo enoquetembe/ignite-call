@@ -8,9 +8,12 @@ import {
   Text,
   TextInput,
 } from '@enoque-ui/react'
+import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 import { ArrowRight } from 'phosphor-react'
 import { Controller, useFieldArray, useForm } from 'react-hook-form'
 import { z } from 'zod'
+import { api } from '@/lib/axios'
 import { convertTimeStringToMinutes } from '@/utils/convert-time-string-to-minutes'
 import { getWeekDays } from '@/utils/get-week-days'
 import { Container, Header } from '../styles'
@@ -23,9 +26,6 @@ import {
   IntervalInputs,
   IntervalItem,
 } from './styles'
-import { api } from '@/lib/axios'
-import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
 
 const timeIntervalsFormSchema = z.object({
   intervals: z
@@ -59,7 +59,7 @@ const timeIntervalsFormSchema = z.object({
         )
       },
       {
-        message: 'The end time must be at least 1h away from the start time.',
+        message: 'The end time must be at least 1h away from the start time',
       },
     ),
 })
@@ -103,7 +103,9 @@ export default function TimeIntervals() {
   async function handleSetTimeIntervals(data: any) {
     const { intervals } = data as TimeIntervalsFormOutput
 
-    await api.post('/users/time-intervals', { intervals })
+    await api.post('/users/time-intervals', {
+      intervals,
+    })
 
     await router.push('/register/update-profile')
   }

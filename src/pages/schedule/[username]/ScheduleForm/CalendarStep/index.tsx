@@ -29,9 +29,9 @@ export function CalendarStep({ onSelectDateTime }: CalendarStepProps) {
   const isDateSelected = !!selectedDate
   const username = String(router.query.username)
 
-  const weekDay = selectedDate ? dayjs(selectedDate).format('dddd') : null
+  const weekDay = selectedDate ? dayjs(selectedDate).format('dddd,') : null
   const describedDate = selectedDate
-    ? dayjs(selectedDate).format('DD[ de ]MMMM')
+    ? dayjs(selectedDate).format('DD MMMM')
     : null
 
   const selectedDateWithoutTime = selectedDate
