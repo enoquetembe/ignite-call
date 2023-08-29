@@ -5,6 +5,10 @@ export const CalendarContainer = styled('div', {
   flexDirection: 'column',
   gap: '$6',
   padding: '$6',
+
+  '@media(max-width: 400px)': {
+    width: '90%',
+  },
 })
 
 export const CalendarHeader = styled('div', {

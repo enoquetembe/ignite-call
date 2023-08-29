@@ -14,6 +14,12 @@ export const ConnectItem = styled('div', {
   padding: '$4 $6',
   border: '1px solid $gray600',
   borderRadius: '$md',
+
+  '@media(max-width: 768px)': {
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    gap: '$3',
+  },
 })
 
 export const AuthError = styled(Text, {
