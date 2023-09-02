@@ -27,13 +27,13 @@
 
 This project was developed with the following technologies:
 
-- <span>[**React.js**](https://reactjs.org/)</span>
 - <span>[**Next.js**](https://nextjs.org/docs)</span>
 - <span>[**Stitches**](https://stitches.dev/)</span>
 - <span>[**Enoque-UI**](https://github.com/enoquetembe/design-system)</span>
 - <span>[**TypeScript**](https://www.typescriptlang.org/)</span>
 - <span>[**NextAuth**](https://next-auth.js.org/) </span>
-- <span>[**Prisma**](https://www.prisma.io/) </span>  
+- <span>[**Prisma**](https://www.prisma.io/) </span>
+- <span>[**MySQL**](https://www.mysql.com/) </span>
 
 
 ## 💻 Project
