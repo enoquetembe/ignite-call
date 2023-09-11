@@ -57,7 +57,7 @@ Open a terminal follow the steps bellow
 1. Clone the repository: 
 
 ``` bash 
- $ git clone https://github.com/enoquetembe/todo.git
+ $ git clone https://github.com/enoquetembe/ignite-call.git
 ```
 
 - Got to the project directory 
